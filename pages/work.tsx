@@ -78,7 +78,7 @@ const Work: NextPage = () => {
         <title>Simon Moravec - Work Experience</title>
       </Head>
       <Menu />
-      <div className={"container px-40 mx-auto font-mono"}>
+      <div className={"container lg:px-40 mx-auto font-mono"}>
         <main className='container pt-20'>
           <h1 className='text-center font-medium leading-tight text-5xl mt-0 mb-2'>Work Experience</h1>
           {getJobTiles()}

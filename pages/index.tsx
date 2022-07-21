@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />
-      <div className={"container px-40 mx-auto font-mono"}>
+      <div className={"container lg:px-40 mx-auto font-mono"}>
         <main className='container'>
           <div className="container flex justify-center content-center mt-20 bg-orange-100 p-10 rounded-2xl">
             <Link href="/">
