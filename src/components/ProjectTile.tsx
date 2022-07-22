@@ -18,11 +18,11 @@ export default function ProjectTile({ project }: ProjectTileProps) {
           <div className="container text-center pr-5">
             <h3 className="font-medium leading-tight text-2xl underline">{project.name}</h3>
           </div>
-          <div className="flex justify-center content-center pt-2">
-            <div className="px-3 w-1/3">
-                <Image width="1006" height="776" src={project.img} alt={project.name} />
+          <div className="flex flex-col md:flex-row mx-auto justify-center content-center pt-2">
+            <div className="px-3 w-1/3  h-1/3 mx-auto ">
+                <Image className="object-cover md:h-full" width="1006" height="776" src={project.img} alt={project.name} />
             </div>
-            <div className="w-2/3">
+            <div className="w-2/3 mx-auto">
                 <div>{project.description}</div>
                 <div className="pt-3">
                     {getUrl(project.seeUrl, "See")} {getUrl(project.repoUrl, "Repo")}
