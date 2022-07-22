@@ -30,7 +30,7 @@ export default function Menu() {
   }
 
   return (
-    <header className="container flex justify-center content-center px-40 mx-auto font-mono bg-orange-400 rounded-xl">
+    <header className="container flex justify-center content-center px-40 md:px-20 mx-auto font-mono bg-orange-400 rounded-xl">
           <nav className='text-xl menu'>
               {getNavLinks()}       
             </nav> 

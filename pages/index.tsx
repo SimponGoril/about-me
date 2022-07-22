@@ -14,11 +14,8 @@ const Home: NextPage = () => {
       <Menu />
       <div className={"container lg:px-40 mx-auto font-mono"}>
         <main className='container'>
-          <div className="container flex justify-center content-center mt-20 bg-orange-100 p-10 rounded-2xl">
-            <Link href="/">
-              <div className="container portrait">
-              </div>
-            </Link>
+          <div className="container flex flex-col md:flex-row mt-20 bg-orange-100 p-10 rounded-2xl">
+            <div className="container portrait" />
             <div className='container pl-3'>
               <div>
                 <h1 className='font-medium leading-tight text-5xl mt-0 mb-2'>Simon Moravec</h1>

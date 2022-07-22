@@ -23,11 +23,11 @@ a {
 
 .portrait {
   background-image: url("/profile-a.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  width: 23rem;
-  height: 16rem;
-  border-radius: 8rem;
+  border-radius: 2rem;
+  width: 15rem;
+  height: 15rem;
   cursor: pointer;
   @media (min-width:1025px) {
     &:hover {
