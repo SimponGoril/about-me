@@ -1,0 +1,213 @@
+{
+    "personal": {
+        "name": "Simon Moravec",
+        "year_of_birth": 1989,
+        "current_location": "Prague, Czechia",
+        "languages": {
+            "czech": "Native speaker",
+            "english": "C1",
+            "spanish": "A1"
+        }
+    },
+    "education": {
+        "schools": [
+            {
+                "name": "Střední škola automobilová a informační",
+                "description": "A-level class (Maturita) education in IT",
+                "type": "High School",
+                "date_from": 2006,
+                "date_to": 2010
+            },
+            {
+                "name": "Fakulta humanitních studií UK",
+                "description": "Philosophy, Sociology, Statistics (Unfinished)",
+                "type": "University",
+                "date_from": 2011,
+                "date_to": 2010
+            }
+        ],
+        "certificates": [
+            {
+                "name": "JAVA Fundamentals I",
+                "issuer": "Oracle",
+                "field": "IT"
+            }, 
+            {
+                "name": "Google Partners: Analytics",
+                "issuer": "Google",
+                "field": "Web Analytics"
+            },
+            {
+                "name": "Google Partners: Adwords",
+                "issuer": "Google",
+                "field": "Marketing"
+            },
+            {
+                "name": "Google Partners: Video Advertising",
+                "issuer": "Google",
+                "field": "Marketing"
+            },
+            {
+                "name": "Google Partners: Mobile Advertising",
+                "issuer": "Google",
+                "field": "Marketing"
+            },
+            {
+                "name": "Blueprint",
+                "issuer": "Facebook",
+                "field": "Marketing"
+            },
+            {
+                "name": "Programmatic certificate",
+                "issuer": "Adform",
+                "field": "Marketing"
+            }
+        ]
+    },
+    "work_experience": [
+        {
+            "name": "SAP Concur",
+            "description": "Creating AWS health & compliance tools. Project Turncode - serverless Github policy runner",
+            "position": "Senior Software Developer",
+            "date_from": 2022,
+            "date_to": "current",
+            "stack": [
+                "Python",
+                "AWS",
+                "Lambda",
+                "Docker",
+                "Git"
+            ]
+        },
+        {
+            "name": "CA / Broadcom / Perfoce",
+            "description": "Fullstack web developer for projects TDM, DataMaker, Blazemeter based around synthetic data generation. Hackaton 2nd place: BlazeData JMeter plugin project",
+            "position": "Senior R&D Software Developer Level 3",
+            "date_from": 2018,
+            "date_to": 2022,
+            "stack": [
+                "TypeScript",
+                "React",
+                "Express",
+                "Jenkins",
+                "Yarn",
+                "Jest",
+                "Monaco Editor",
+                "Docker",
+                "Webpack5"
+            ]
+        },
+        {
+            "name": "Telefónica O2 CZ",
+            "description": "Collaborating on new version of customer facing CRM written in Java / Liferay (Portlet framework)",
+            "position": "Software Developer",
+            "date_from": 2017,
+            "date_to": 2018,
+            "stack": [
+                "Java",
+                "Portlets",
+                "Liferay",
+                "Spring",
+                "Hibernate",
+                "Elasticsearch",
+                "Jenkins",
+                "Maven"
+            ]
+        },
+        {
+            "name": "Winsite",
+            "description": "Fullstack web developer for idea marketplace project",
+            "position": "Web Developer",
+            "date_from": 2017,
+            "date_to": 2017,
+            "stack": [
+                "Java",
+                "Spring",
+                "Hibernate",
+                "Postgresql",
+                "Jenkins",
+                "Maven",
+                "Javascript",
+                "AngularJS",
+                "HTML5",
+                "Less",
+                "NodeJS"
+            ]
+        },
+        {
+            "name": "CE TravelHolding",
+            "description": "Lead generation and site analysis for Czech tour providers with millions in online spends annualy - Blue Style & TravelPortal.cz. Leading team of two (graphic designer & CW), experiences with special projects (CPEX, GSP, FB multiads etc.)",
+            "position": "Web Marketing Specialist",
+            "date_from": 2013,
+            "date_to": 2017,
+            "stack": [
+                "PPC",
+                "Affiliate",
+                "Display",
+                "Newsletters",
+                "Web Analytics",
+                "RTB"
+            ]
+        },
+        {
+            "name": "Happywinter.com",
+            "description": "Kickstarting eshop for people with unique clothing style",
+            "position": "Owner",
+            "date_from": 2013,
+            "date_to": 2013,
+            "stack": [
+                "E-commerce",
+                "Prestashop",
+                "Content",
+                "UOL",
+                "Web Analytics"
+            ]
+        },
+        {
+            "name": "Masanta.com",
+            "description": "Managing eshops with annual income over 1 milion CZK. Affiliate manager of SWORP.net. Project manager of developing crowdsourcing project",
+            "position": "Junior Project Manager",
+            "date_from": 2009,
+            "date_to": 2013,
+            "stack": [
+                "E-commerce",
+                "Affiliate",
+                "PPC",
+                "Content",
+                "UOL"
+            ]
+        }
+    ],
+    "personal_projects": [
+        {
+            "name": "Toad Story",
+            "description": "Another game in ExcaliburJS, created as a proof of concept for touch controls, physics, custom camera strategy implementation and particle effects. Includes animation, sounds and randomly generated levels ",
+            "img_url": "/projects/toadstory.jpg",
+            "repo_url": "https://github.com/SimponGoril/toad-story",
+            "see_url": "http://public-bucket-hosting2.s3-website.eu-central-1.amazonaws.com/"
+        },
+        {
+            "name": "Crabby",
+            "description": "A small top-down shooting game with 5 levels. Includes spritework, animations, sounds, ui, some game mechanics - spawning spiders, reloading on rock piles, treasure chests, and more! Use Tile editor to be extended with more levels",
+            "img_url": "/projects/crabby.png",
+            "repo_url": "https://github.com/SimponGoril/crabby",
+            "see_url": "http://public-bucket-hosting.s3-website.eu-central-1.amazonaws.com/"
+        },
+        {
+            "name": "WordTree",
+            "description": "Proof of concept for relational mapping and hierarchy visualisation. Currently, you can input keywords, types of bonds between them and see visualisation in Graph window. In the future, you can select word from articles and import them in-mass",
+            "img_url": "/projects/wordtree.jpg",
+            "repo_url": "https://github.com/SimponGoril/wordtree",
+            "seeUrl": "https://wordtree.vercel.app"
+        },
+        {
+            "name": "Snake",
+            "description": "I used RaspberryPi AstroHat joystick to create a simple Snake game implementation. ",
+            "img_url": "/projects/snake.jpg",
+            "see_url": "https://www.youtube.com/watch?v=E0eSixPusN0"
+        }
+    ],
+    "contact": {
+        "email": "de.fe(zavinac)seznam.cz"
+    }
+}

@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Some description
+Parameters:
+  Environment:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - production
+Resources:
+  QuotesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: Quotes
+      AttributeDefinitions:
+        -
+          AttributeName: author
+          AttributeType: S
+        -
+          AttributeName: quote
+          AttributeType: S
+      KeySchema:
+        -
+          AttributeName: quote
+          KeyType: HASH       
+        -
+          AttributeName: author
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 3
+        WriteCapacityUnits: 3
+Outputs:
+  Student:
+    Description: Student table created with this template
+    Value: !Ref QuotesTable

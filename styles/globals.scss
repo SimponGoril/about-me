@@ -6,10 +6,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #FFFFFF;
-  color: black
+  color: black;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -35,4 +34,22 @@ a {
     }
   }
 
+}
+
+.spin {
+  font-size: 40px;
+  display: inline-block;
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twist-up {
+  to {
+    transform: rotateX(360deg);
+  }
 }
