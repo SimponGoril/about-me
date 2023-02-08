@@ -3,7 +3,11 @@ import { NextPage } from "next";
 import Menu from "../src/components/menu";
 import Head from "next/head";
 
-const About: NextPage = () => {
+type AboutProps = {
+  kanyes_quote: string
+}
+
+const About: NextPage<AboutProps> = ({ kanyes_quote }) => {
 
   return (
     <>
@@ -56,7 +60,12 @@ const About: NextPage = () => {
                   <div className='flex items-center justify-center pt-5'>
                     <Image width="477" height="636" src="/me.jpg" alt="Hi, its me, Simon" />
                   </div>
-                </div>
+                  <div className="pt-3 text-center">
+                    <h4 className="font-medium leading-tight text-xl">Kanyes West quote of the day:</h4>
+                      <span className="text-center italic">{kanyes_quote}</span>
+                    </div>
+                  </div>
+                
               </div>
             </div>
           </div>
@@ -65,5 +74,15 @@ const About: NextPage = () => {
     </>
   )
 };
+
+export async function getStaticProps(context: AboutProps) {
+  const response = await fetch("https://api.kanye.rest");
+  const data = await response.json();
+  return {
+    props: {
+      kanyes_quote: data.quote
+    },
+  }
+}
 
 export default About

@@ -51,3 +51,8 @@ export type CV = {
     work_experience: WorkExperience[]
     personal_projects: PersonalProject[]
 }
+
+export type Quote = {
+    author: string
+    quote: string
+}

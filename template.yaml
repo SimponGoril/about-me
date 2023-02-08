@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Some description
+Description: DynamoDB backend for my personal page
 Parameters:
   Environment:
     Type: String
@@ -29,7 +29,37 @@ Resources:
       ProvisionedThroughput:
         ReadCapacityUnits: 3
         WriteCapacityUnits: 3
+  AuditTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: Audit
+      AttributeDefinitions:
+        -
+          AttributeName: id
+          AttributeType: S
+        -
+          AttributeName: email
+          AttributeType: S
+        -
+          AttributeName: timestamp
+          AttributeType: S
+        -
+          AttributeName: name
+          AttributeType: S
+      KeySchema:
+        -
+          AttributeName: id
+          KeyType: HASH       
+        -
+          AttributeName: timestamp
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 3
+        WriteCapacityUnits: 3
 Outputs:
-  Student:
-    Description: Student table created with this template
+  QuotesTable:
+    Description: Quotes table created with this template
     Value: !Ref QuotesTable
+  AuditTable:
+    Description: Audit table created with this template
+    Value: !Ref AuditTable

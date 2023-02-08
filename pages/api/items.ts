@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "./auth/[...nextauth]"
@@ -7,6 +6,7 @@ import {
   ScanCommand
 } from '@aws-sdk/client-dynamodb';
 import { unmarshall } from '@aws-sdk/util-dynamodb' 
+import { Quote } from '../../src/types';
 
 const client = new DynamoDBClient({
   credentials: {
@@ -18,14 +18,12 @@ const client = new DynamoDBClient({
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<any>
+  res: NextApiResponse<Quote[] | string>
 ) {
   const session = await getServerSession(req, res, authOptions)
 
   if (!session) {
-    res.status(403).send({
-      error: "Please authorize before requesting this resource",
-    })
+    res.status(403).send("Please authorize before requesting this resource")
   }
 
   if (req.method === 'GET') {
@@ -35,9 +33,9 @@ export default async function handler(
       })
     );
 
-    const result = []
+    const result: Quote[] = []
     for (let i of Items!) {
-      result.push(unmarshall(i))
+      result.push(unmarshall(i) as Quote)
     }
     return res.status(200).json(result);
   }

@@ -4,6 +4,8 @@ import { useSession, signIn, signOut } from "next-auth/react"
 
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { isProd } from "../src/utils";
+import { Table } from "../src/components/table";
 
 const Api: NextPage = ({ }) => {
   const { data: session } = useSession()
@@ -18,6 +20,13 @@ const Api: NextPage = ({ }) => {
       try {
         const response = await fetch("/api/items");
         const data = await response.json();
+
+        if (isProd()) {
+          await fetch("/api/audit", {
+            method: 'POST',
+            body: JSON.stringify(session!.user)
+          });
+        }
         setItems(data);
       } catch (e) {
         console.log(e)
@@ -32,22 +41,7 @@ const Api: NextPage = ({ }) => {
   const getTable = () => {
     if (!items) return undefined
 
-    return <table className="border-collapse w-full border border-slate-400 dark:border-slate-500 bg-white dark:bg-slate-800 text-sm shadow-sm">
-      <thead className="bg-slate-50 dark:bg-slate-700">
-        <tr>
-          <th className="w-1/2 border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Author</th>
-          <th className="w-1/2 border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Quote</th>          
-        </tr>
-      </thead>
-      <tbody>
-        {items!.map((i) => {
-          return <tr key={i.quote}>
-            <td className="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">{i.author}</td>
-            <td className="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">{i.quote}</td>
-          </tr>
-        })}
-      </tbody>
-    </table>
+    return <Table items={items}/>
   }
 
   return (
