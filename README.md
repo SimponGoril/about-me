@@ -3,6 +3,10 @@
 
 ![Architecture](docs/UML.svg)
 
+## How it works
+1. During build time, SSG content is generated. During this phase, third-party API is called with quote for `/about` section. This content is behaving as static html with all the benefits - SEO-friendly, works with slow clients or disabled JS
+2. `/api` section allows client to sign-in (with Github or Google) and on successfull authentication will retrieve DynamoDB contents via backend API. This section use SSR - code is pre-rendered on server and later rehydrated client side
+
 ## Deployments 
 1. Local development possible by running `yarn dev`
 2. Push to `integration` branch deploys to [prod](http://www.psimon.cz) instance
