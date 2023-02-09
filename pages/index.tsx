@@ -17,7 +17,7 @@ const Home: NextPage = () => {
           <div className="max-w-6xl px-12 mx-auto text-center">
             <div className="space-y-12 md:text-center">
               <div className="max-w-3xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
-                <h2 className="relative text-4xl font-extrabold tracking-tight sm:text-5xl">Hi, I am Simon 👋</h2>
+                <h2 className="relative text-4xl font-extrabold tracking-tight sm:text-5xl">Hi, I am Simon <span className='wave'>👋</span></h2>
                 <p className="text-xl text-gray-500">A Software Developer based in Prague 🇨🇿 Part of CAT🐱 team at Concur<br />
                   Currently, we are working on AWS Cloud compliance & health tools. My former projects were for Broadcom, O2 and others. Outside of this, I code <a className="underline" target="_blank" rel="noreferrer" href="http://public-bucket-hosting.s3-website.eu-central-1.amazonaws.com/">random cool stuff</a> or <a className="underline" target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=E0eSixPusN0">prototype on my RaspberryPi</a></p>
                 <div className="flex flex-col items-center">
