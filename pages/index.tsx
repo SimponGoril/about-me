@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Simon Moravec - Personal Page</title>
+        <title>Hi, I am Simon</title>
         <meta name="description" content="Personal portfoilo of Simon Moravec, web developer specializing on TypeScript/Javascript" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

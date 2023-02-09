@@ -47,7 +47,7 @@ const Api: NextPage = ({ }) => {
   return (
     <>
       <Head>
-        <title>Simon Moravec - API</title>
+        <title>Hi, I am Simon - API</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />

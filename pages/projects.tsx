@@ -20,7 +20,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects = [] }) => {
   return (
     <>
       <Head>
-        <title>Simon Moravec - Personal Projects</title>
+        <title>Hi, I am Simon - Personal Projects</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />

@@ -22,7 +22,7 @@ export default function JobTile({ job }: JobTileProps) {
         <div className="container float-left p-1 flex justify-center w-2/5 content-center  bg-slate-100 rounded-3xl">
           <div className="container text-right pr-5">
             <div className="font-extrabold">{job.position}</div>
-            <div>{job.description}</div>
+            <div className="lg:text-sm">{job.description}</div>
           </div>    
         </div>
         <div className="container">

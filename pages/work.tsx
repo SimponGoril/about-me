@@ -23,7 +23,7 @@ const Work: NextPage<WorkProps> = ({ jobs }) => {
   return (
     <>
       <Head>
-        <title>Simon Moravec - Work Experience</title>
+        <title>Hi, I am Simon - Work Experience</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />
@@ -32,7 +32,7 @@ const Work: NextPage<WorkProps> = ({ jobs }) => {
           <h1 className='text-center font-medium leading-tight text-5xl mt-0 mb-2'>Work Experience</h1>
           <div className='flex justify-center content-center flex-col noprint'>
             <div className='container'><h2 className="text-3xl font-extrabold sm:text-3xl text-center">CV.json</h2></div>
-            <div className='container m-5 border border-solid p-4 bg-black'>
+            <div className='container flex justify-center py-5'>
               <DynamicReactJson src={cv} name="curriculum vitae" shouldCollapse={(field) => { return field.type === 'array' }} displayDataTypes={false} displayObjectSize={false} enableClipboard={false} quotesOnKeys={false} theme={'summerfruit'} indentWidth={2} />
             </div>
           </div>

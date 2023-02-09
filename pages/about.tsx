@@ -12,7 +12,7 @@ const About: NextPage<AboutProps> = ({ kanyes_quote }) => {
   return (
     <>
       <Head>
-        <title>Simon Moravec - About me</title>
+        <title>Hi, I am Simon - About Me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />

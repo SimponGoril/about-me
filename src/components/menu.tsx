@@ -36,7 +36,7 @@ export default function Menu() {
   }
 
   return (
-    <header className="container text-center px-40 py-2">
+    <header className="container text-center lg:px-40 py-2">
           <nav className='text-xl menu'>
               {getNavLinks()}       
             </nav> 
