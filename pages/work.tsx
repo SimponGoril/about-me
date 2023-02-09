@@ -5,6 +5,7 @@ import Menu from '../src/components/menu';
 import dynamic from 'next/dynamic';
 import cv from '../public/cv.json';
 import Head from 'next/head';
+import { useState } from 'react';
 
 const DynamicReactJson = dynamic(import('react-json-view'), { ssr: false });
 
@@ -13,7 +14,7 @@ type WorkProps = {
 }
 
 const Work: NextPage<WorkProps> = ({ jobs }) => {
-
+  const [isPrettyPrinted, setIsPrettyPrinted] = useState<boolean>(false)
   const getJobTiles = () => {
     return jobs.map((j, i) => {
       return <JobTile key={i} job={j} />
@@ -33,11 +34,26 @@ const Work: NextPage<WorkProps> = ({ jobs }) => {
           <div className='flex justify-center content-center flex-col noprint'>
             <div className='container'><h2 className="text-3xl font-extrabold sm:text-3xl text-center">CV.json</h2></div>
             <div className='container flex justify-center py-5'>
-              <DynamicReactJson src={cv} name="curriculum vitae" shouldCollapse={(field) => { return field.type === 'array' }} displayDataTypes={false} displayObjectSize={false} enableClipboard={false} quotesOnKeys={false} theme={'summerfruit'} indentWidth={2} />
+              <DynamicReactJson style={{width: "100%"}} 
+                                src={cv} 
+                                name="curriculum vitae" 
+                                shouldCollapse={(field) => { return field.type === 'array' }} 
+                                displayDataTypes={false} 
+                                displayObjectSize={false} 
+                                enableClipboard={false} 
+                                quotesOnKeys={false} 
+                                theme={'summerfruit'} 
+                                indentWidth={2} />
             </div>
           </div>
-          <h2 className="text-3xl font-extrabold sm:text-3xl text-center">Pretty print</h2>
-          {getJobTiles()}
+          {!isPrettyPrinted && <div className="flex justify-center">
+            <button onClick={() => setIsPrettyPrinted(true)} 
+                    className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                      Pretty print?
+            </button>
+          </div>
+          }
+          {isPrettyPrinted && getJobTiles()}
         </div>
       </main>
     </>
